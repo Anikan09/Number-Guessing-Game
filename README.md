@@ -1,3 +1,3 @@
 # Number-Guessing-Game
 
-I made this Game a lomg time ago.
+I made this Game a long time ago.
