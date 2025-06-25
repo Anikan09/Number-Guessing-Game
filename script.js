@@ -289,5 +289,17 @@ function guessTheNumber() {
   }
 
   return JSConfetti;
+  
+  let correctGuess(userGuess, correctNumber) {
+    if (userGuess === correctNumber) {
+      correctGuesses++;
+      localStorage.setItem("correctGuesses", correctGuesses);
+      console.log("Correct! You already have" + correctGuesses + "right");
+      } else {
+        console.log("Wrong.");
+      }
+  }
 })();    
 }
+
+// localStorage.removeItem("correctGuesses");
