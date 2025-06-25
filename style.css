@@ -242,6 +242,10 @@ button:hover {
     flex: 1;
 }
 
+.correct {
+    
+}
+
 @media (max-width: 1400px) {
     .col-1400 {
         flex-direction: column;
