@@ -301,5 +301,3 @@ function guessTheNumber() {
   }
 })();    
 }
-
-// localStorage.removeItem("correctGuesses");
