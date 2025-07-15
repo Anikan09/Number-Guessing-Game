@@ -15,7 +15,7 @@ body {
 
 header {
     background-color: #1a2336;
-    padding: 16px 100px;
+    padding: 16px 800px;
     font-size: 24px;
     position: fixed;
     left: 0;
@@ -242,10 +242,6 @@ button:hover {
     flex: 1;
 }
 
-.correct {
-    
-}
-
 @media (max-width: 1400px) {
     .col-1400 {
         flex-direction: column;
@@ -276,5 +272,4 @@ button:hover {
     }
     .col-850 {
         flex-direction: column;
-    }
-}
+}}
