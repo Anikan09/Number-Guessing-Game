@@ -2,31 +2,45 @@ let numberToGuess = Math.round(Math.random() * 100);
 let tries = 0;
 let correct = 0;
 
+const myNumber = document.getElementById("myNumber");
+const headline = document.getElementById("headline");
+const displayTries = document.getElementById("displayTries");
+const correctDisplay = document.getElementById("correct");
+
 function guessTheNumber() {
     tries = tries + 1;
-    displayTries.innerHTML = 'Try: ' + tries;
-    if(numberToGuess == myNumber.value) {
+    displayTries.innerHTML = 'Tries: ' + tries;
+
+    const userGuess = parseInt(myNumber.value);
+
+    if (numberToGuess === userGuess) {
         correct = correct + 1;
         headline.innerHTML = 'You won!!! 🥳🎉';
+        correctDisplay.innerHTML = 'Correct: ' + correct;
+
+        const correctList = document.getElementById("correctList");
+        const listItem = document.createElement("li");
+        listItem.textContent = userGuess;
+        correctList.appendChild(listItem);
+
         let jsConfetti = new JSConfetti();
         jsConfetti.addConfetti();
+
+        numberToGuess = Math.round(Math.random() * 100);
     }
-    
-    if(numberToGuess > myNumber.value) {
+    else if (numberToGuess > userGuess) {
         headline.innerHTML = 'The number is higher! 😃';
     }
-
-    if(numberToGuess < myNumber.value) {
+    else {
         headline.innerHTML = 'The number is lower! 😢';
     }
+
     myNumber.value = '';
 }
 
-// JSConfetti Library
 var JSConfetti = (function () {
   "use strict";
 
-  // Utility functions
   function assertInstance(instance, constructor) {
     if (!(instance instanceof constructor)) {
       throw new TypeError("Cannot call a class as a function");
@@ -72,7 +86,6 @@ var JSConfetti = (function () {
     return Math.log(width) / Math.log(1920);
   }
 
-  // Confetti shape class
   const ConfettiShape = createClass(function ConfettiShape(options) {
     assertInstance(this, ConfettiShape);
 
@@ -218,7 +231,6 @@ var JSConfetti = (function () {
     return { confettiRadius, confettiNumber, confettiColors, emojis, emojiSize };
   }
 
-  // Confetti batch handler
   const ConfettiBatch = createClass(function ConfettiBatch(ctx) {
     assertInstance(this, ConfettiBatch);
     this.canvasContext = ctx;
@@ -261,7 +273,6 @@ var JSConfetti = (function () {
     }
   ]);
 
-  // JSConfetti Main class
   return createClass(function JSConfetti(config = {}) {
     assertInstance(this, JSConfetti);
 
