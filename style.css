@@ -36,6 +36,7 @@ header {
 
 .github-icon:hover {
     transform: scale(1.1);
+    trasnform: rotate(360deg);
 }
 
 .show-now {
