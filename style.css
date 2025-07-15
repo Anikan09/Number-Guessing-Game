@@ -15,12 +15,27 @@ body {
 
 header {
     background-color: #1a2336;
-    padding: 16px 800px;
-    font-size: 24px;
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.github-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.1);
 }
 
 .show-now {
@@ -273,3 +288,10 @@ button:hover {
     .col-850 {
         flex-direction: column;
 }}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: gray;
+}
