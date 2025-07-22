@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <span>Number Guessing Game</span>
+            <a href="https://github.com/Anikan09" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                    alt="GitHub" class="github-icon">
+            </a>
+    </header>
+
+    <div class="cont">
+        <h1 id="headline">Guess the Number!</h1>
+        <h2 id="displayTries">Tries: 0</h2>
+        <h2 id="correct">Correct: 0</h2>
+        <ul id="correctList"></ul>
+        <form onsubmit="guessTheNumber(); return false;">
+        <input id="myNumber" type="number" required placeholder="Enter a number ...">
+        <button>Guess!</button>
+        </form>
+    </div>
+
+    <footer>Build and Developed by Anakin</footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
